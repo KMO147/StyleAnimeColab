@@ -15,12 +15,18 @@ class IDLoss(nn.Module):
 
     def extract_feats(self, x):
         x = x[:, :, 35:223, 32:220]  # Crop interesting region
+        print(x.shape)
+        print('id_loss_2')
         x = self.face_pool(x)
+        print(x.shape)
+        print('id_loss_3')
         x_feats = self.facenet(x)
         return x_feats
 
     def forward(self, y_hat, y, x):
         n_samples = x.shape[0]
+        print(x.shape)
+        print('id_loss_1')
         x_feats = self.extract_feats(x)
         y_feats = self.extract_feats(y)  # Otherwise use the feature from there
         y_hat_feats = self.extract_feats(y_hat)
