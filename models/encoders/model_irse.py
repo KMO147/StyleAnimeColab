@@ -1,5 +1,6 @@
 from torch.nn import Linear, Conv2d, BatchNorm1d, BatchNorm2d, PReLU, Dropout, Sequential, Module
 from models.encoders.helpers import get_blocks, Flatten, bottleneck_IR, bottleneck_IR_SE, l2_norm
+import torch
 
 """
 Modified Backbone implementation from [TreB1eN](https://github.com/TreB1eN/InsightFace_Pytorch)
@@ -42,7 +43,6 @@ class Backbone(Module):
 		self.body = Sequential(*modules)
 
 	def forward(self, x):
-		# x = x[:, :3, :, :]
 		x = self.input_layer(x)
 		x = self.body(x)
 		x = self.output_layer(x)
