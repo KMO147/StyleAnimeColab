@@ -1,13 +1,13 @@
 dataset_paths = {
-	'anime_train_segmentation': 'dds/Danbooru-Parsing/anime_seg_train',
-	'anime_test_segmentation': 'dds/Danbooru-Parsing/anime_seg_test_68',
-	'anime_train': 'dds/Danbooru-Parsing/anime_face_train',
-	'anime_test': 'dds/Danbooru-Parsing/anime_face_test_68',
+	'anime_train_segmentation': 'labeled_dds/Danbooru-Parsing/anime_seg_train',
+	'anime_test_segmentation': 'labeled_dds/Danbooru-Parsing/anime_seg_test_68',
+	'anime_train': 'labeled_dds/Danbooru-Parsing/anime_face_train',
+	'anime_test': 'labeled_dds/Danbooru-Parsing/anime_face_test_68',
     
-	'face_train_segmentation': 'dds/CelebaMask-HQ/celeba_seg_train',
-	'face_test_segmentation': 'dds/CelebaMask-HQ/celeba_seg_test_68',
-	'face_train': 'dds/CelebaMask-HQ/celeba_face_train',
-	'face_test': 'dds/CelebaMask-HQ/celeba_face_test_68',
+	'face_train_segmentation': 'labeled_dds/CelebaMask-HQ/celeba_seg_train',
+	'face_test_segmentation': 'labeled_dds/CelebaMask-HQ/celeba_seg_test_68',
+	'face_train': 'labeled_dds/CelebaMask-HQ/celeba_face_train',
+	'face_test': 'labeled_dds/CelebaMask-HQ/celeba_face_test_68',
 }
 
 model_paths = {
